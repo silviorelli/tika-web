@@ -1,4 +1,5 @@
 class ScansController < ApplicationController
+  require 'rest_client'
 
   def index
     @scans = Scan.all
@@ -26,8 +27,17 @@ class ScansController < ApplicationController
     # Call to tika server
     begin
       tika_out = ""
+      
+      #### Can't make it work, always getting "405 Method Not Allowed" 
+      # file = File.open(path, "r")
+      # RestClient.post('http://0.0.0.0:9998/meta', upload: file)
 
+      #### Other way
+      # JSON output
+      #tika_out = `curl -H \"Accept: application/json\" -T #{path} http://0.0.0.0:9998/meta`
 
+      # Plaintext output
+      tika_out = `curl -T #{path} http://0.0.0.0:9998/meta`
 
       @scan.body = tika_out
     rescue

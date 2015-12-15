@@ -1,9 +1,9 @@
 # Apache Tika extremely simple web interface
 
 
-Run Tika in server mode:
+Run Tika server:
 
-`TODO`
+`java -jar tika-server-1.11.jar -h 0.0.0.0`
 
 
 Install Rails and gems:
