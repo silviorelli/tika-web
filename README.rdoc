@@ -6,12 +6,12 @@ Run Tika in server mode with:
 
 Install Rails and gems with
 
-bundle install
++bundle install+
 
 
 Run web server with
 
-bundle exec rails s
++bundle exec rails s+
 
 
 Point yout browser to:
