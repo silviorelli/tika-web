@@ -13,8 +13,6 @@ class ScansController < ApplicationController
   end
 
   def create
-    #raise params.inspect
-
     @scan = Scan.new
 
     @scan.filename = params[:scan][:file].original_filename
