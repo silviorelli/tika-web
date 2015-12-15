@@ -1,4 +1,5 @@
 # Apache Tika extremely simple web interface
+https://github.com/silviorelli/tika-web
 
 
 Run Tika server:
@@ -8,7 +9,7 @@ Run Tika server:
 
 Install Rails and gems:
 
-`bundle install`
+`gem install bundler && bundle install`
 
 
 Run web server:
