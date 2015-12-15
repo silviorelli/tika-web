@@ -1,0 +1,10 @@
+<div>
+	<p><%= link_to "New scan", new_scan_path %></p>
+</div>
+
+<h2>Scans</h2>
+<div>
+	<% @scans.each do |scan| %>
+		<p><%= link_to scan.filename, scan_path(scan) %> - <%= link_to "delete", scan_path(scan), method: :delete %></p>
+	<% end %>
+</div>

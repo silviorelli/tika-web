@@ -1,0 +1,15 @@
+<div>
+	<p><%= link_to "Scans Index", root_path %></p>
+</div>
+
+<h2>New scan</h2>
+<div>
+	<%= form_tag scans_path, { :multipart => true } do %>
+    	<p>
+    		<%= file_field_tag 'scan[file]' %>
+    	</p>
+    	<p>
+    		<%= submit_tag "Upload" %>
+    	</p>
+	<% end %>
+</div>
